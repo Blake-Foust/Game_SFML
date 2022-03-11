@@ -3,11 +3,16 @@
 
 //Constructor
 Game::Game():mWindow(sf::VideoMode(1200,800), "SFML Application"),
-	     mPlayer()
+	     mPlayer(),
+		 mTexture()
 {
-	mPlayer.setRadius(40.f);
+	
+	if(!mTexture.loadFromFile("christmascard.png"))
+	{
+		mWindow.close();
+	}
+	mPlayer.setTexture(mTexture);
 	mPlayer.setPosition(100.f,100.f);
-	mPlayer.setFillColor(sf::Color::Cyan);
 };
 
 //Destructor
@@ -55,15 +60,8 @@ void Game::update(sf::Time deltaTime)
 //Renders game to screen
 void Game::render()
 {
-	sf::Texture texture;
-	if(!texture.loadFromFile("christmascard.png"))
-	{
-		mWindow.close();
-	}
-	sf::Sprite sprite(texture);
-	sprite.setPosition(100.f,100.f);
 	mWindow.clear();
-	mWindow.draw(sprite);
+	mWindow.draw(mPlayer);
 	mWindow.display();
 };
 

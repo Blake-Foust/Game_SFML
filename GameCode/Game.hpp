@@ -18,7 +18,8 @@ class Game
 {
 private:
 	sf::RenderWindow mWindow;
-	sf::CircleShape  mPlayer;	
+	sf::Texture mTexture;
+	sf::Sprite mPlayer;
 private:
 	void processEvents();
 	void update(sf::Time);
