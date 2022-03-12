@@ -4,11 +4,10 @@
 //Constructor
 Game::Game():mWindow(sf::VideoMode(1200,800), "SFML Application"),
 	     mPlayer()
-		 //mTexture()
 {
 	//Load sprite in mPlayer, sprite is drawn in render
 	TextureHolder textures;
-	textures.load(Textures::Character,"christmascard.png");
+	textures.load(Textures::Character,"/Sprites/christmascard.png");
 	mPlayer.setTexture(textures.get(Textures::Character));
 	mPlayer.setPosition(100.f,100.f);
 };
