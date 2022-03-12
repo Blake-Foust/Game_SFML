@@ -11,14 +11,13 @@
 //Libaries
 #include <iostream>
 
-
 #define logl(x) std::cout << x << std::endl;
 
 class Game
 {
 private:
 	sf::RenderWindow mWindow;
-	sf::Texture mTexture;
+	//sf::Texture mTexture;
 	sf::Sprite mPlayer;
 private:
 	void processEvents();

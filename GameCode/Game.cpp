@@ -1,17 +1,15 @@
 #include "Game.hpp"
-
+#include "TextureHolder.hpp"
 
 //Constructor
 Game::Game():mWindow(sf::VideoMode(1200,800), "SFML Application"),
-	     mPlayer(),
-		 mTexture()
+	     mPlayer()
+		 //mTexture()
 {
-	
-	if(!mTexture.loadFromFile("christmascard.png"))
-	{
-		mWindow.close();
-	}
-	mPlayer.setTexture(mTexture);
+	//Load sprite in mPlayer, sprite is drawn in render
+	TextureHolder textures;
+	textures.load(Textures::Character,"christmascard.png");
+	mPlayer.setTexture(textures.get(Textures::Character));
 	mPlayer.setPosition(100.f,100.f);
 };
 
