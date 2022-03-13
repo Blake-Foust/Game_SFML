@@ -3,6 +3,7 @@
 
 #include <map>
 #include <memory>
+#include <cassert>
 
 #include <SFML/Graphics.hpp>
 

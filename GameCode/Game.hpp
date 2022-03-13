@@ -19,6 +19,7 @@ private:
 	sf::RenderWindow mWindow;
 	//sf::Texture mTexture;
 	sf::Sprite mPlayer;
+	sf::Sprite mBackground;
 private:
 	void processEvents();
 	void update(sf::Time);

@@ -7,9 +7,14 @@ Game::Game():mWindow(sf::VideoMode(1200,800), "SFML Application"),
 {
 	//Load sprite in mPlayer, sprite is drawn in render
 	TextureHolder textures;
-	textures.load(Textures::Character,"/Sprites/christmascard.png");
+	textures.load(Textures::Background,"Sprites/BG.png");
+	textures.load(Textures::Character,"Sprites/character1.png");
+	//textures.load(Textures::Character,"Sprites/christmascard.png");
 	mPlayer.setTexture(textures.get(Textures::Character));
+	mBackground.setTexture(textures.get(Textures::Background));
+	mBackground.setPosition(100.f,100.f);
 	mPlayer.setPosition(100.f,100.f);
+
 };
 
 //Destructor
