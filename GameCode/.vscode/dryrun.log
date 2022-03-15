@@ -1,8 +1,0 @@
-/usr/bin/make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/dracul/sfml_game/GameCode'
-g++ -O -c Game.cpp
-g++ -O -c main.cpp
-g++ -O -c TextureHolder.cpp
-g++ -O -o GameTest Game.o main.o TextureHolder.o -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network
-make: Leaving directory '/home/dracul/sfml_game/GameCode'
- 

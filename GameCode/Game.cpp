@@ -2,14 +2,12 @@
 #include "TextureHolder.hpp"
 
 //Constructor
-Game::Game():mWindow(sf::VideoMode(1200,800), "SFML Application"),
+Game::Game():mWindow(sf::VideoMode(1200,800), "Mr Squishy. THE GAME!?"),
 	     mPlayer()
 {
 	//Load sprite in mPlayer, sprite is drawn in render
-	TextureHolder textures;
 	textures.load(Textures::Background,"Sprites/BG.png");
 	textures.load(Textures::Character,"Sprites/character1.png");
-	//textures.load(Textures::Character,"Sprites/christmascard.png");
 	mPlayer.setTexture(textures.get(Textures::Character));
 	mBackground.setTexture(textures.get(Textures::Background));
 	mBackground.setPosition(100.f,100.f);
@@ -63,6 +61,7 @@ void Game::update(sf::Time deltaTime)
 void Game::render()
 {
 	mWindow.clear();
+	mWindow.draw(mBackground);
 	mWindow.draw(mPlayer);
 	mWindow.display();
 };

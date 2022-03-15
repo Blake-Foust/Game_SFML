@@ -10,6 +10,7 @@
 
 //Libaries
 #include <iostream>
+#include "TextureHolder.hpp"
 
 #define logl(x) std::cout << x << std::endl;
 
@@ -17,7 +18,7 @@ class Game
 {
 private:
 	sf::RenderWindow mWindow;
-	//sf::Texture mTexture;
+	TextureHolder textures;
 	sf::Sprite mPlayer;
 	sf::Sprite mBackground;
 private:
